@@ -3,3 +3,5 @@ bin
 gen
 .classpath
 .project
+src/com/google/bitcoin
+src/org/slf4j
