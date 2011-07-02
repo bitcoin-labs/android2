@@ -2,11 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+    android:layout_height="fill_parent">
+
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:text="Home"/>
+
+	<Button
+		android:id="@+id/scan_button"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+    	android:text="Scan">
+	</Button>
+
+	<Button
+		android:id="@+id/receive_button"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+    	android:text="Receive">
+	</Button>
+
+	<Button
+		android:id="@+id/check_balance_button"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+    	android:text="Check Balance">
+	</Button>
+	
+	<Button
+		android:id="@+id/settings_button"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+    	android:text="Settings">
+	</Button>
+
 </LinearLayout>

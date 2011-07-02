@@ -6,12 +6,22 @@
     <uses-sdk android:minSdkVersion="7" />
 
     <application android:icon="@drawable/icon" android:label="@string/app_name">
+    
         <activity android:name=".HomeActivity"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        
+        <activity android:name=".ReceiveActivity">
+        </activity>
+        
+        <activity android:name=".ConfirmActivity">
+        </activity>
+        
+        <activity android:name=".SettingsActivity">
         </activity>
 
     </application>
