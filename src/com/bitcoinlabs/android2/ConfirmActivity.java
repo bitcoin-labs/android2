@@ -1,9 +1,9 @@
 package com.bitcoinlabs.android2;
 
+import com.google.bitcoin.core.Address;
+
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
-import android.widget.Toast;
 
 public class ConfirmActivity extends Activity {
 	
@@ -11,5 +11,9 @@ public class ConfirmActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.confirm);
+        
+        Bundle extras = getIntent().getExtras();
+        BitcoinURI uri = (BitcoinURI)extras.get("BITCOIN_URI");
+        Util.toastLong(this, "Address: " + uri.addresses.get(0));
     }
 }

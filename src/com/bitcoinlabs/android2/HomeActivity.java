@@ -1,9 +1,11 @@
 package com.bitcoinlabs.android2;
 
+import java.math.BigDecimal;
+
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -56,14 +58,14 @@ public class HomeActivity extends Activity implements OnClickListener {
 		if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
                 String scanResult = intent.getStringExtra("SCAN_RESULT");
-                Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
+                Intent i = new Intent(getApplicationContext(), ConfirmActivity.class);
                 try {
                 	BitcoinURI bitcoinUri = new BitcoinURI(scanResult);
                     i.putExtra("BITCOIN_URI", bitcoinUri);
                     startActivity(i);
                 }
                 catch (InvalidURIException e) {
-                	Util.toastLong(this, "Invalid/unsupported URI!");
+                	Util.toastLong(this, e.toString());
                 }
             }
             else if (resultCode == RESULT_CANCELED) {
